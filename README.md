@@ -84,8 +84,11 @@ Set two variables on a page class, and every note with that class in `cssclasses
 .mr-atlas {
   --mp-section-color: #4a90e2;
   --mp-section-icon: url("data:image/svg+xml;utf8,…");
+  --mp-section-name: "Atlas";   /* shown in hover previews */
 }
 ```
+
+Hover previews of hub pages show a small header band with the section icon and name, followed by the lead text.
 
 ## License
 
