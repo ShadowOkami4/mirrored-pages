@@ -2,7 +2,7 @@
 
 ![Mirrored Pages in dark mode](screenshot.png)
 
-A silver-mirror theme for [Obsidian](https://obsidian.md): deep slate glass in dark mode, brushed silver in light mode, and serif headings with a reflected rule beneath them.
+A silver-mirror theme for [Obsidian](https://obsidian.md): deep, dark slate glass in dark mode, brushed silver in light mode, and serif headings with a reflected rule beneath them.
 
 Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a tabletop RPG setting written as an Obsidian vault, but it works in any vault.
 
@@ -17,6 +17,7 @@ Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a ta
 - **A `[!gm]` callout** for Game Master notes, with a *GM only* corner ribbon.
 - **A `[!player]` callout** for text players may read, drawn as a card with a *Player info* corner ribbon.
 - **Section cards.** Add `cssclasses: hub` to a note, and each list under a heading becomes a grid of cards in reading view: icon badge, coloured top edge, subtitle and a large faded icon. Text after the link, such as `<small>Places and maps</small>`, becomes the subtitle.
+- **A small cracked mirror-shard emblem** in the bottom-right corner of every note.
 - **Night-sky graph view behind cracked mirror glass** in dark mode, and a pale dawn sky in light mode.
 - **Atlas VTT support.** The [Atlas VTT](https://github.com/ByteMirror/atlas-vtt) plugin picks up the theme's colours, accents and dice font.
 - **No external requests.** No web fonts or images are loaded; headings use serif fonts already on your system.
@@ -34,7 +35,7 @@ Install [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) to
 | Heading style | serif or sans-serif |
 | Serif body text | on / off |
 | Page width | 560–1100 px |
-| Heading sheen, reflected rule, night sky, mirror cracks | on / off |
+| Heading sheen, reflected rule, page emblem, night sky, mirror cracks | on / off |
 | Glass blur | 0–24 px |
 
 ## Requirements
