@@ -12,6 +12,7 @@ Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a ta
 - **Silver headings.** A soft sheen on titles and a mirrored double rule under the first two heading levels.
 - **Frosted-glass callouts, menus and pop-ups.**
 - **A `[!gm]` callout** for Game Master notes, coloured separately from other callouts.
+- **A `[!player]` callout** for text players may read, drawn as a card with a *Player info* corner ribbon.
 - **Hub notes as cards.** Add `cssclasses: hub` to a note, and the list under each heading is shown as a grid of glass cards in reading view.
 - **Starfield graph view** in dark mode.
 - **Atlas VTT support.** The [Atlas VTT](https://github.com/ByteMirror/atlas-vtt) plugin picks up the theme's colours, accents and dice font.
@@ -25,6 +26,7 @@ Install [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) to
 | --- | --- |
 | Mirror accent | any colour, separately for dark and light |
 | GM callout colour | any colour, separately for dark and light |
+| Player info colour | any colour, separately for dark and light |
 | Surface | slate, obsidian, pewter |
 | Heading style | serif or sans-serif |
 | Serif body text | on / off |
@@ -38,11 +40,14 @@ Install [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) to
 
 **By hand:** copy `theme.css` and `manifest.json` into `<your vault>/.obsidian/themes/Mirrored Pages/`, then choose *Mirrored Pages* under Settings → Appearance → Themes.
 
-## GM callout
+## GM and player callouts
 
 ```markdown
 > [!gm]- GM only
 > The innkeeper is the thief.
+
+> [!player] What players know
+> The inn is warm, cheap and never empty.
 ```
 
 ## License
