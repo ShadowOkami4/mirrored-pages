@@ -41,3 +41,33 @@ Text below the shard.
 
 > [!player] What players know
 > Ogledal is the royal capital of Lustro, famous for its bridges of polished silver-glass.
+
+## Text elements
+
+A [[Home|resolved link]], an [[Unwritten Place|unresolved link]], an [external link](https://obsidian.md), some ==highlighted text==, `inline code` and a footnote.[^1] Tags: #lore #gm-only
+
+- A diamond bullet
+  - A nested bullet
+- Another bullet
+
+1. First step
+2. Second step
+
+- [ ] An open task
+- [x] A finished task
+
+## Code
+
+```js
+const mirror = reflect(world); // returns the other side
+```
+
+## Embedded note
+
+![[Home#Sections]]
+
+## Image
+
+![[Kagameru_World_Map.jpg|500]]
+
+[^1]: Footnotes get a small accent badge.
