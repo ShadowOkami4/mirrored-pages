@@ -16,7 +16,7 @@ Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a ta
 - **Frosted-glass menus and pop-ups.**
 - **A `[!gm]` callout** for Game Master notes, with a *GM only* corner ribbon.
 - **A `[!player]` callout** for text players may read, drawn as a card with a *Player info* corner ribbon.
-- **Hub notes as cards.** Add `cssclasses: hub` to a note, and the list under each heading is shown as a grid of glass cards in reading view.
+- **Section cards.** Add `cssclasses: hub` to a note, and each list under a heading becomes a grid of cards in reading view: icon badge, coloured top edge, subtitle and a large faded icon. Text after the link, such as `<small>Places and maps</small>`, becomes the subtitle.
 - **Night-sky graph view behind cracked mirror glass** in dark mode, and a pale dawn sky in light mode.
 - **Atlas VTT support.** The [Atlas VTT](https://github.com/ByteMirror/atlas-vtt) plugin picks up the theme's colours, accents and dice font.
 - **No external requests.** No web fonts or images are loaded; headings use serif fonts already on your system.
@@ -57,6 +57,17 @@ Obsidian 1.15 or newer.
 > The inn is warm, cheap and never empty.
 ```
 
+## Custom card colours and icons
+
+Each card reads two variables, so a CSS snippet in your vault can give a card its own look by matching the link name:
+
+```css
+body .hub .el-ul > ul > li:has(> a.internal-link[data-href="Atlas"]) {
+  --mp-card-color: #4a90e2;
+  --mp-card-icon: url("data:image/svg+xml;utf8,…");  /* any SVG; used as a mask */
+}
+```
+
 ## License
 
-[MIT](LICENSE) © Okami
+[MIT](LICENSE) © Okami. The default card icon is from [Lucide](https://lucide.dev) (ISC License).
