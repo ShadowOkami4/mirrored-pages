@@ -26,6 +26,7 @@ Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a ta
 - **A small cracked mirror-shard emblem** in the bottom-right corner of every note.
 - **Night-sky graph view behind cracked mirror glass** in dark mode, and a pale dawn sky in light mode.
 - **Hearth support.** The [Hearth](https://github.com/ondreu/Hearth) start screen gets the night sky and mirror cracks, a silver serif title and framed mirror cards.
+- **Ranked statblocks for Atlas VTT.** Layout names decide the look: *character* (gold), *npc* (silver), *important* (violet), *boss* (crimson, cracked glass) and *companion* (green with a paw badge, for familiars, mounts and pets).
 - **Atlas VTT support.** The [Atlas VTT](https://github.com/ByteMirror/atlas-vtt) plugin picks up the theme's colours, accents and dice font.
 - **No external requests.** No web fonts or images are loaded; headings use serif fonts already on your system.
 
