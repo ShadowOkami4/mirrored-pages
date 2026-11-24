@@ -55,6 +55,18 @@ Obsidian 1.15 or newer.
 
 **By hand:** copy `theme.css` and `manifest.json` into `<your vault>/.obsidian/themes/Mirrored Pages/`, then choose *Mirrored Pages* under Settings → Appearance → Themes.
 
+## Coins
+
+```html
+<span class="coin pp">2</span> <span class="coin gp">34</span> <span class="coin ep">1</span> <span class="coin sp">33</span> <span class="coin cp">107</span>
+```
+
+Each coin gets its own metal: platinum, gold, electrum, silver, copper.
+
+## Character callouts
+
+`[!personality]`, `[!appearance]`, `[!purse]`, `[!inventory]` and `[!notes]` have their own colours and icons. Lists inside personality and appearance become two-column fact grids; tables inside callouts fill the callout.
+
 ## GM and player callouts
 
 ```markdown
