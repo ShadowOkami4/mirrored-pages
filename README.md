@@ -1,5 +1,7 @@
 # Mirrored Pages
 
+![Mirrored Pages in dark mode](screenshot.png)
+
 A silver-mirror theme for [Obsidian](https://obsidian.md): deep slate glass in dark mode, brushed silver in light mode, and serif headings with a reflected rule beneath them.
 
 Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a tabletop RPG setting written as an Obsidian vault, but it works in any vault.

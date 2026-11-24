@@ -296,6 +296,7 @@ body.mp-body-serif { --font-text-theme: var(--mp-serif); }
 
 /* ---------- Headings: silver sheen + reflected rule --------------------- */
 body:not(.mp-no-sheen) .markdown-rendered h1,
+body:not(.mp-no-sheen) .markdown-source-view.mod-cm6 .cm-header-1,
 body:not(.mp-no-sheen) .inline-title {
   background: linear-gradient(180deg, var(--mp-silver-hi) 0%, var(--mp-silver-hi) 45%, var(--mp-silver-lo) 100%);
   -webkit-background-clip: text;
@@ -306,12 +307,16 @@ body:not(.mp-no-sheen) .inline-title {
 .theme-dark .markdown-rendered h1 { letter-spacing: 0.01em; }
 
 body:not(.mp-no-reflection) .markdown-rendered h1,
-body:not(.mp-no-reflection) .markdown-rendered h2 {
+body:not(.mp-no-reflection) .markdown-rendered h2,
+body:not(.mp-no-reflection) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1,
+body:not(.mp-no-reflection) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2 {
   position: relative;
   padding-bottom: 0.35em;
 }
 body:not(.mp-no-reflection) .markdown-rendered h1::after,
-body:not(.mp-no-reflection) .markdown-rendered h2::after {
+body:not(.mp-no-reflection) .markdown-rendered h2::after,
+body:not(.mp-no-reflection) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1::after,
+body:not(.mp-no-reflection) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -324,7 +329,8 @@ body:not(.mp-no-reflection) .markdown-rendered h2::after {
     linear-gradient(90deg, transparent, color-mix(in srgb, var(--mp-accent) 30%, transparent) 18%, color-mix(in srgb, var(--mp-silver-lo) 20%, transparent) 60%, transparent) 0 4px / 100% 1px no-repeat;
   opacity: 0.85;
 }
-body:not(.mp-no-reflection) .markdown-rendered h2::after { opacity: 0.5; right: 30%; }
+body:not(.mp-no-reflection) .markdown-rendered h2::after,
+body:not(.mp-no-reflection) .markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2::after { opacity: 0.5; right: 30%; }
 
 .markdown-rendered h3 { color: var(--h3-color); }
 .markdown-rendered h4,
