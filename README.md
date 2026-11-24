@@ -55,6 +55,14 @@ Obsidian 1.15 or newer.
 
 **By hand:** copy `theme.css` and `manifest.json` into `<your vault>/.obsidian/themes/Mirrored Pages/`, then choose *Mirrored Pages* under Settings → Appearance → Themes.
 
+## Link buttons
+
+```html
+<a class="button" href="https://example.com">Open the map</a>
+```
+
+A glowing pill button for important links. Add `dndbeyond` to the class for a red D&D Beyond button.
+
 ## Coins
 
 ```html
@@ -65,7 +73,7 @@ Each coin gets its own metal: platinum, gold, electrum, silver, copper.
 
 ## Character callouts
 
-`[!personality]`, `[!appearance]`, `[!purse]`, `[!inventory]` and `[!notes]` have their own colours and icons. Lists inside personality and appearance become two-column fact grids; tables inside callouts fill the callout.
+`[!personality]`, `[!appearance]`, `[!backstory]`, `[!companions]`, `[!purse]`, `[!inventory]` and `[!notes]` have their own colours and icons. Lists inside personality and appearance become two-column fact grids; tables inside callouts fill the callout.
 
 ## GM and player callouts
 
