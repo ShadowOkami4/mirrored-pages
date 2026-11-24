@@ -10,11 +10,14 @@ Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a ta
 
 - **Dark and light modes.** Slate, obsidian or pewter surfaces in the dark; brushed silver in the light.
 - **Silver headings.** A soft sheen on titles and a mirrored double rule under the first two heading levels.
-- **Frosted-glass callouts, menus and pop-ups.**
-- **A `[!gm]` callout** for Game Master notes, coloured separately from other callouts.
+- **Callouts framed like small mirrors:** a tinted title band, a round icon badge, silver corner brackets and a diagonal glint. Every callout type has its own colour.
+- **Mirror-pane blockquotes** with a large quotation mark and a double accent bar.
+- **Mirror-shard separators:** `---` becomes a silver line with a glowing diamond.
+- **Frosted-glass menus and pop-ups.**
+- **A `[!gm]` callout** for Game Master notes, with a *GM only* corner ribbon.
 - **A `[!player]` callout** for text players may read, drawn as a card with a *Player info* corner ribbon.
 - **Hub notes as cards.** Add `cssclasses: hub` to a note, and the list under each heading is shown as a grid of glass cards in reading view.
-- **Starfield graph view** in dark mode.
+- **Night-sky graph view behind cracked mirror glass** in dark mode, and a pale dawn sky in light mode.
 - **Atlas VTT support.** The [Atlas VTT](https://github.com/ByteMirror/atlas-vtt) plugin picks up the theme's colours, accents and dice font.
 - **No external requests.** No web fonts or images are loaded; headings use serif fonts already on your system.
 
@@ -31,8 +34,12 @@ Install [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) to
 | Heading style | serif or sans-serif |
 | Serif body text | on / off |
 | Page width | 560–1100 px |
-| Heading sheen, reflected rule, starfield | on / off |
+| Heading sheen, reflected rule, night sky, mirror cracks | on / off |
 | Glass blur | 0–24 px |
+
+## Requirements
+
+Obsidian 1.15 or newer.
 
 ## Installing
 
