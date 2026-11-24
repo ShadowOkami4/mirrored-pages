@@ -20,6 +20,8 @@ Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a ta
 - **Frames for properties, embedded notes, images and code blocks.**
 - **A `[!gm]` callout** for Game Master notes, with a *GM only* corner ribbon.
 - **A `[!player]` callout** for text players may read, drawn as a card with a *Player info* corner ribbon.
+- **Section pages.** A note with `cssclasses: hub` gets a header panel in its section colour, with the section icon and a large faded copy of it; the first paragraph after the back link reads as a lead.
+- **Back links.** `> [!up] [[Parent]]` becomes a slim pill with an up-arrow badge.
 - **Section cards.** Add `cssclasses: hub` to a note, and each list under a heading becomes a grid of cards in reading view: icon badge, coloured top edge, subtitle and a large faded icon. Text after the link, such as `<small>Places and maps</small>`, becomes the subtitle.
 - **A small cracked mirror-shard emblem** in the bottom-right corner of every note.
 - **Night-sky graph view behind cracked mirror glass** in dark mode, and a pale dawn sky in light mode.
@@ -71,6 +73,17 @@ Each card reads two variables, so a CSS snippet in your vault can give a card it
 body .hub .el-ul > ul > li:has(> a.internal-link[data-href="Atlas"]) {
   --mp-card-color: #4a90e2;
   --mp-card-icon: url("data:image/svg+xml;utf8,…");  /* any SVG; used as a mask */
+}
+```
+
+## Section colours
+
+Set two variables on a page class, and every note with that class in `cssclasses` uses them for its header, back link and accents:
+
+```css
+.mr-atlas {
+  --mp-section-color: #4a90e2;
+  --mp-section-icon: url("data:image/svg+xml;utf8,…");
 }
 ```
 
