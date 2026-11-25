@@ -129,6 +129,35 @@ const mirror = reflect(world); // returns the other side
 > [!secret] What the archivist hides
 > The reflection in the lens has been running the archive for years.
 
+> [!shattered] The broken mirror
+> Cracks spread from the corner where something struck the glass. Also works as `[!mirror]`.
+
+> [!prophecy] The old warning
+> When the moon drinks the river and the glass forgets its maker, seven will sit at one table.
+
+> [!curse] The innkeeper's bargain
+> Whoever breaks the seals beneath the altar will never again see their own reflection.
+
+> [!vision] What the lens showed
+> A forest full of light, and a door standing open with no wall around it. Also works as `[!dream]`.
+
+> [!combat] Ambush on the old road
+> - **4 bandits**, **1 bandit captain**
+> - Half cover behind the fallen cart
+> - The captain flees at half HP
+
+> [!clue] Found under the bar
+> A receipt for 40 silver mirrors, signed with Maria Rose's initials, dated next spring.
+
+> [!divine] Blessing of the Moon
+> Each creature that prays at the altar gains 1d4 temporary hit points and Advantage on its next Wisdom save. Also works as `[!holy]`.
+
+> [!arcane] Ward-sigil
+> A circle of silver runes under the floorboards. *Detect Magic* reveals strong abjuration. Also works as `[!magic]`.
+
+> [!weather] Storm over the forest
+> Heavy rain: Disadvantage on Perception checks that rely on hearing; open flames go out.
+
 ## Character callouts
 
 > [!personality] Character

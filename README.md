@@ -95,6 +95,15 @@ Each keyword has its own design, not just its own colour:
 | `[!location]` | a faint map grid with contour rings |
 | `[!quest]` | a banner title |
 | `[!secret]` | a wax seal |
+| `[!shattered]` / `[!mirror]` | cracked glass spreading from the top-right corner |
+| `[!prophecy]` | a night sky with glowing, centred text |
+| `[!curse]` | dark smoke closing in |
+| `[!vision]` / `[!dream]` | soft, iridescent edges |
+| `[!combat]` | crossed swords and a red edge |
+| `[!clue]` | a pinned sticky note |
+| `[!divine]` / `[!holy]` | golden rays from above |
+| `[!arcane]` / `[!magic]` | a rune circle |
+| `[!weather]` | slanted rain |
 
 With *Callout style: Minimal* they all fall back to a plain tinted box. `docs/design-test.md` shows every design in the theme on one page.
 
