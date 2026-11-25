@@ -77,6 +77,27 @@ A glowing pill button for important links. Add `dndbeyond` to the class for a re
 
 Each coin gets its own metal: platinum, gold, electrum, silver, copper.
 
+## TTRPG callouts
+
+Each keyword has its own design, not just its own colour:
+
+| Callout | Design |
+| --- | --- |
+| `[!read-aloud]` / `[!boxed]` | boxed text to read to players: large serif with a quotation mark |
+| `[!handout]` | a sheet of parchment, slightly tilted, dark ink |
+| `[!rumor]` | a dashed speech bubble with a tail |
+| `[!loot]` | gold glints; list items become chips |
+| `[!lore]` | an illuminated first letter |
+| `[!trap]` / `[!hazard]` | warning stripes along the top |
+| `[!rule]` / `[!mechanic]` | graph paper |
+| `[!music]` / `[!ambience]` | equaliser bars along the bottom |
+| `[!timeline]` | a vertical line with a ring per list entry |
+| `[!location]` | a faint map grid with contour rings |
+| `[!quest]` | a banner title |
+| `[!secret]` | a wax seal |
+
+With *Callout style: Minimal* they all fall back to a plain tinted box. `docs/design-test.md` shows every design in the theme on one page.
+
 ## Character callouts
 
 `[!personality]`, `[!appearance]`, `[!backstory]`, `[!companions]`, `[!purse]`, `[!inventory]` and `[!notes]` have their own colours and icons. Lists inside personality and appearance become two-column fact grids; tables inside callouts fill the callout.
