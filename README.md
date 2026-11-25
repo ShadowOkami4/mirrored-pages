@@ -123,7 +123,7 @@ With *Callout style: Minimal* they all fall back to a plain tinted box. `docs/de
 
 ## Statblock creature types
 
-Atlas VTT statblocks change look with the creature's type. Each type gets its own colour and background texture, and its name joins the rank label (`◆ NPC · Undead`); the rank (NPC, Important NPC, Boss, Dormant) keeps its label, size and frame.
+Atlas VTT statblocks change look with the creature's type. Each type gets its own colour and background texture, and the header shows a rank pill and a type pill above the name; the rank (NPC, Important NPC, Boss, Dormant) keeps its label, size and frame.
 
 | Type | Look |
 | --- | --- |
