@@ -121,6 +121,28 @@ With *Callout style: Minimal* they all fall back to a plain tinted box. `docs/de
 > The inn is warm, cheap and never empty.
 ```
 
+## Statblock creature types
+
+Atlas VTT statblocks change look with the creature's type. Each type gets its own colour, background texture, a badge above the header and a faint watermark; the rank (NPC, Important NPC, Boss, Dormant) keeps its label, size and frame.
+
+| Type | Look |
+| --- | --- |
+| Undead | spectral green mist, skull |
+| Fiend | ember glow and sparks, flame |
+| Celestial | soft golden rays, sun |
+| Fey | pink and green sparkles, iridescent edge |
+| Dragon | bronze scales, slit-pupil eye |
+| Construct | steel grid with rivets, cog |
+| Aberration | violet ripples, split-colour name |
+| Elemental | blue wave arcs, tornado |
+| Giant | stone courses, larger name |
+| Monstrosity | orange cell pattern, DNA |
+| Ooze | green drips from the top, droplets |
+| Plant | green vines, leaf |
+| Beast | claw marks, paw |
+
+How it works: Atlas can't hand a field's value to CSS, so the Mirrored Realms NPC, Important NPC, Boss and Dormant Threat templates start with thirteen hidden marker blocks. Atlas shows only the one whose condition matches the `type` field (`creature_type` on the Dormant template), and the theme reads that marker. The match is exact but ignores case: write the plain type (`Undead`) and put anything extra in `subtype` (`Tiefling Lich`). To use it in your own Atlas template, copy the first thirteen blocks from one of those templates.
+
 ## Custom card colours and icons
 
 Each card reads two variables, so a CSS snippet in your vault can give a card its own look by matching the link name:
