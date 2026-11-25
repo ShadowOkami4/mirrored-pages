@@ -123,23 +123,23 @@ With *Callout style: Minimal* they all fall back to a plain tinted box. `docs/de
 
 ## Statblock creature types
 
-Atlas VTT statblocks change look with the creature's type. Each type gets its own colour and background texture, and the header shows a rank pill and a type pill above the name; the rank (NPC, Important NPC, Boss, Dormant) keeps its label, size and frame.
+Atlas VTT statblocks show the creature's type as a pill next to the rank pill above the name, and as a small round seal beside the token. The statblock itself keeps its rank colours (NPC silver, Important violet, Boss red, Dormant violet to red).
 
-| Type | Look |
+| Type | Seal |
 | --- | --- |
-| Undead | spectral green mist |
-| Fiend | ember glow and sparks |
-| Celestial | soft golden rays |
-| Fey | pink and green sparkles, iridescent edge |
-| Dragon | bronze scales, rounded score cards |
-| Construct | steel grid with rivets, square cards |
-| Aberration | violet ripples, split-colour name |
-| Elemental | blue wave arcs |
-| Giant | stone courses, larger name |
-| Monstrosity | orange cell pattern |
-| Ooze | green drips from the top |
-| Plant | green vines |
-| Beast | claw marks |
+| Undead | green skull |
+| Fiend | ember flame |
+| Celestial | golden sun |
+| Fey | pink sparkles |
+| Dragon | bronze slit-pupil eye |
+| Construct | steel cog |
+| Aberration | violet brain |
+| Elemental | blue tornado |
+| Giant | stone mountain |
+| Monstrosity | orange DNA |
+| Ooze | green droplets |
+| Plant | green leaf |
+| Beast | brown paw |
 
 How it works: Atlas can't hand a field's value to CSS, so the Mirrored Realms NPC, Important NPC, Boss and Dormant Threat templates start with thirteen hidden marker blocks. Atlas shows only the one whose condition matches the `type` field (`creature_type` on the Dormant template), and the theme reads that marker. The match is exact but ignores case: write the plain type (`Undead`) and put anything extra in `subtype` (`Tiefling Lich`). To use it in your own Atlas template, copy the first thirteen blocks from one of those templates.
 
