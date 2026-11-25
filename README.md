@@ -95,7 +95,7 @@ Each keyword has its own design, not just its own colour:
 | `[!location]` | a faint map grid with contour rings |
 | `[!quest]` | a banner title |
 | `[!secret]` | a wax seal |
-| `[!shattered]` / `[!mirror]` | cracked glass spreading from the top-right corner |
+| `[!shattered]` / `[!mirror]` | a pane of glass struck near the top-right corner |
 | `[!prophecy]` | a night sky with glowing, centred text |
 | `[!curse]` | dark smoke closing in |
 | `[!vision]` / `[!dream]` | soft, iridescent edges |
