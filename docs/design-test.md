@@ -86,6 +86,9 @@ const mirror = reflect(world); // returns the other side
 
 ## TTRPG callouts
 
+> [!professor] Professor Phineas Phantomhive II
+> *"A mirror does not lie. It only forgets which side of the glass you were standing on."*
+
 > [!read-aloud] Read aloud
 > The fire has burned low. Somewhere above you, a glass cracks, though no one in the room has moved.
 

@@ -168,6 +168,7 @@ Each keyword has its own design, not just its own colour:
 | `[!divine]` / `[!holy]` | golden rays from above |
 | `[!arcane]` / `[!magic]` | a rune circle |
 | `[!weather]` | slanted rain |
+| `[!professor]` / `[!phineas]` | **the Professor's annotation**: ink-blue ruled vellum with a red margin line, a PⅡ ex-libris seal, a folded corner, a satin bookmark ribbon, and the title signed beneath the quote with a pen flourish |
 
 With *Callout style: Minimal* they all fall back to a plain tinted box. `docs/design-test.md` shows every design in the theme on one page.
 
