@@ -71,3 +71,24 @@ const mirror = reflect(world); // returns the other side
 ![[Kagameru_World_Map.jpg|500]]
 
 [^1]: Footnotes get a small accent badge.
+
+## Headings
+
+### A level-3 heading with its diamond
+
+#### A level-4 heading in small caps
+
+## Task states
+
+- [ ] Open
+- [x] Done
+- [/] In progress
+- [-] Cancelled
+- [!] Important
+- [?] Question
+- [>] Moved to next session
+- [*] Starred
+
+## Keys
+
+Press <kbd>Ctrl</kbd> + <kbd>P</kbd> and type **New**.

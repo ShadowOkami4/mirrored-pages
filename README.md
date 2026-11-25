@@ -15,6 +15,8 @@ Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a ta
 - **Mirror-shard separators:** `---` becomes a silver line with a glowing diamond.
 - **Frosted-glass menus and pop-ups**, with framed hover previews.
 - **A livelier workspace:** glowing active file and accent-lined active tab, tinted folder icons, ribbon icons that glow on hover, a glass status bar.
+- **Custom task states:** `[/]` in progress, `[-]` cancelled, `[!]` important, `[?]` question, `[>]` moved, `[*]` starred, each with its own icon and colour.
+- **Glass keyboard keys** for `<kbd>`, a diamond before level-3 headings and small caps for level 4, and an optional drop cap.
 - **Text details:** links that glow on hover, diamond list bullets, glowing checkboxes, tag pills, soft highlight glow, code chips and accent footnote numbers.
 - **Tables and Bases:** small-caps headers with an accent rule, striped rows, hover highlight, a tinted Bases toolbar.
 - **Frames for properties, embedded notes, images and code blocks.**
@@ -44,6 +46,9 @@ Install [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) to
 | Serif body text | on / off |
 | Page width | 560–1100 px |
 | Heading sheen, reflected rule, page emblem, night sky, mirror cracks | on / off |
+| Callout style | High, Medium, Minimal |
+| Blockquote style | High, Medium, Minimal |
+| Drop cap, heading ornaments | on / off |
 | Glass blur | 0–24 px |
 
 ## Requirements
