@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="The four accent palettes">
+<rect width="1000" height="300" rx="16" fill="#080a10"/>
+<text x="500" y="42" text-anchor="middle" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Palatino, Georgia, serif" font-size="22" font-weight="700" fill="#eef2f7">Accent palettes</text>
+<g>
+<rect x="30" y="70" width="220" height="200" rx="14" fill="#0d1014" stroke="#8fb6e0" stroke-opacity="0.45"/>
+<rect x="30" y="70" width="220" height="5" rx="2" fill="url(#p0)"/>
+<linearGradient id="p0" x1="0" x2="1"><stop offset="0" stop-color="#8fb6e0"/><stop offset="1" stop-color="#a98ae6"/></linearGradient>
+<text x="50" y="110" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Palatino, Georgia, serif" font-size="20" font-weight="700" fill="#f4f7fb">Mirror</text>
+<text x="50" y="130" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#9aa3ae">silver-blue and violet</text>
+<circle cx="70" cy="170" r="18" fill="#8fb6e0"/><circle cx="112" cy="170" r="18" fill="#a98ae6"/>
+<text x="152" y="167" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#9aa3ae">dark</text>
+<rect x="50" y="200" width="180" height="50" rx="8" fill="#eef1f5"/>
+<circle cx="70" cy="225" r="13" fill="#3f6f9f"/><circle cx="102" cy="225" r="13" fill="#6b4fb3"/>
+<text x="152" y="229" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5b6470">light</text>
+<text x="180" y="170" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Palatino, Georgia, serif" font-size="18" font-weight="700" fill="#8fb6e0">Aa</text>
+</g><g>
+<rect x="270" y="70" width="220" height="200" rx="14" fill="#0d1014" stroke="#b39af0" stroke-opacity="0.45"/>
+<rect x="270" y="70" width="220" height="5" rx="2" fill="url(#p1)"/>
+<linearGradient id="p1" x1="0" x2="1"><stop offset="0" stop-color="#b39af0"/><stop offset="1" stop-color="#e08ad0"/></linearGradient>
+<text x="290" y="110" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Palatino, Georgia, serif" font-size="20" font-weight="700" fill="#f4f7fb">Amethyst</text>
+<text x="290" y="130" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#9aa3ae">purple and orchid</text>
+<circle cx="310" cy="170" r="18" fill="#b39af0"/><circle cx="352" cy="170" r="18" fill="#e08ad0"/>
+<text x="392" y="167" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#9aa3ae">dark</text>
+<rect x="290" y="200" width="180" height="50" rx="8" fill="#eef1f5"/>
+<circle cx="310" cy="225" r="13" fill="#6b4fb3"/><circle cx="342" cy="225" r="13" fill="#9a3f90"/>
+<text x="392" y="229" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5b6470">light</text>
+<text x="420" y="170" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Palatino, Georgia, serif" font-size="18" font-weight="700" fill="#b39af0">Aa</text>
+</g><g>
+<rect x="510" y="70" width="220" height="200" rx="14" fill="#0d1014" stroke="#a48df0" stroke-opacity="0.45"/>
+<rect x="510" y="70" width="220" height="5" rx="2" fill="url(#p2)"/>
+<linearGradient id="p2" x1="0" x2="1"><stop offset="0" stop-color="#a48df0"/><stop offset="1" stop-color="#7fb0f0"/></linearGradient>
+<text x="530" y="110" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Palatino, Georgia, serif" font-size="20" font-weight="700" fill="#f4f7fb">Twilight</text>
+<text x="530" y="130" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#9aa3ae">violet and blue</text>
+<circle cx="550" cy="170" r="18" fill="#a48df0"/><circle cx="592" cy="170" r="18" fill="#7fb0f0"/>
+<text x="632" y="167" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#9aa3ae">dark</text>
+<rect x="530" y="200" width="180" height="50" rx="8" fill="#eef1f5"/>
+<circle cx="550" cy="225" r="13" fill="#5a4fb3"/><circle cx="582" cy="225" r="13" fill="#3f6f9f"/>
+<text x="632" y="229" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5b6470">light</text>
+<text x="660" y="170" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Palatino, Georgia, serif" font-size="18" font-weight="700" fill="#a48df0">Aa</text>
+</g><g>
+<rect x="750" y="70" width="220" height="200" rx="14" fill="#0d1014" stroke="#c3cdd8" stroke-opacity="0.45"/>
+<rect x="750" y="70" width="220" height="5" rx="2" fill="url(#p3)"/>
+<linearGradient id="p3" x1="0" x2="1"><stop offset="0" stop-color="#c3cdd8"/><stop offset="1" stop-color="#9aa6b4"/></linearGradient>
+<text x="770" y="110" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Palatino, Georgia, serif" font-size="20" font-weight="700" fill="#f4f7fb">Moonsilver</text>
+<text x="770" y="130" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#9aa3ae">no colour</text>
+<circle cx="790" cy="170" r="18" fill="#c3cdd8"/><circle cx="832" cy="170" r="18" fill="#9aa6b4"/>
+<text x="872" y="167" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#9aa3ae">dark</text>
+<rect x="770" y="200" width="180" height="50" rx="8" fill="#eef1f5"/>
+<circle cx="790" cy="225" r="13" fill="#4f5a68"/><circle cx="822" cy="225" r="13" fill="#7d8896"/>
+<text x="872" y="229" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5b6470">light</text>
+<text x="900" y="170" font-family="Iowan Old Style, Palatino Linotype, Book Antiqua, Palatino, Georgia, serif" font-size="18" font-weight="700" fill="#c3cdd8">Aa</text>
+</g>
+</svg>

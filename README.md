@@ -1,39 +1,100 @@
-# Mirrored Pages
+<div align="center">
+  <img src="docs/readme/banner.svg" alt="Mirrored Pages: a silver-mirror theme for Obsidian" width="100%">
+  <p><strong>Deep slate glass in the dark, brushed silver in the light, and serif headings with a reflected rule beneath them.</strong></p>
+  <p>
+    <code>Obsidian 1.15+</code> ·
+    <code>dark &amp; light</code> ·
+    <code>Style Settings</code> ·
+    <code>Atlas VTT</code> ·
+    <code>Hearth</code> ·
+    <code>Dice Roller</code> ·
+    <code>MIT</code>
+  </p>
+  <p>
+    <a href="#a-look-inside">A look inside</a> ·
+    <a href="#features">Features</a> ·
+    <a href="#settings">Settings</a> ·
+    <a href="#installing">Installing</a> ·
+    <a href="#ttrpg-callouts">TTRPG callouts</a> ·
+    <a href="#license">License</a>
+  </p>
+</div>
 
-![Mirrored Pages in dark mode](screenshot.png)
-
-A silver-mirror theme for [Obsidian](https://obsidian.md): deep, dark slate glass in dark mode, brushed silver in light mode, and serif headings with a reflected rule beneath them.
+---
 
 Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a tabletop RPG setting written as an Obsidian vault, but it works in any vault.
 
+## A look inside
+
+<p align="center">
+  <img src="docs/readme/home.jpg" alt="Section cards on a hub page, each with its own colour and icon, under a night-sky title card" width="49%">
+  <img src="docs/readme/graph.jpg" alt="The graph view over a dark night sky with a faint struck-glass crack" width="49%">
+</p>
+<p align="center"><em>Section cards on a hub page, and the night-sky graph view.</em></p>
+
+<p align="center">
+  <img src="docs/readme/callouts-1.jpg" alt="Callouts for read-aloud text, handouts, rumours, loot, lore, traps and rules" width="32%">
+  <img src="docs/readme/callouts-2.jpg" alt="Callouts for prophecy, curses, visions, combat, clues, divine blessings, arcane wards and weather" width="32%">
+  <img src="docs/readme/place-page.jpg" alt="A page with a quote callout, an at-a-glance box and the reflected rule under its headings" width="32%">
+</p>
+<p align="center"><em>Every TTRPG callout has its own design, and pages get quote and at-a-glance boxes.</em></p>
+
+<details>
+<summary><strong>Atlas VTT statblocks</strong></summary>
+<p align="center">
+  <img src="docs/readme/sandra-page.jpg" alt="A character page with its Atlas VTT statblock beside it" width="100%">
+</p>
+<p align="center">
+  <img src="docs/readme/statblock-creature.jpg" alt="Creature rank: Kaleidoscope statblock with Creature and Aberration tags" width="32%">
+  <img src="docs/readme/statblock-dormant.jpg" alt="Dormant rank: Sandra Mistic statblock in violet and red" width="32%">
+  <img src="docs/readme/statblock-boss.jpg" alt="Boss rank: Maria Rose, Corrupted statblock in red with legendary actions" width="32%">
+</p>
+<p align="center"><em>Creature, Dormant Boss and Boss: each rank has its own colours, and every statblock shows its creature type.</em></p>
+</details>
+
 ## Features
+
+### Look
 
 - **Dark and light modes.** Slate, obsidian or pewter surfaces in the dark; brushed silver in the light.
 - **Silver headings.** A soft sheen on titles and a mirrored double rule under the first two heading levels.
-- **Callouts framed like small mirrors:** a tinted title band, a round icon badge, silver corner brackets and a diagonal glint. Every callout type has its own colour.
 - **Mirror-pane blockquotes** with a large quotation mark and a double accent bar.
 - **Mirror-shard separators:** `---` becomes a silver line with a glowing diamond.
-- **Frosted-glass menus and pop-ups**, with framed hover previews.
-- **A livelier workspace:** glowing active file and accent-lined active tab, tinted folder icons, ribbon icons that glow on hover, a glass status bar.
-- **Custom task states:** `[/]` in progress, `[-]` cancelled, `[!]` important, `[?]` question, `[>]` moved, `[*]` starred, each with its own icon and colour.
 - **Glass keyboard keys** for `<kbd>`, a diamond before level-3 headings and small caps for level 4, and an optional drop cap.
 - **Text details:** links that glow on hover, diamond list bullets, glowing checkboxes, tag pills, soft highlight glow, code chips and accent footnote numbers.
 - **Tables and Bases:** small-caps headers with an accent rule, striped rows, hover highlight, a tinted Bases toolbar.
 - **Frames for properties, embedded notes, images and code blocks.**
+- **A small cracked mirror-shard emblem** in the bottom-right corner of every note.
+- **No external requests.** No web fonts or images are loaded; headings use serif fonts already on your system.
+
+### Callouts
+
+- **Callouts framed like small mirrors:** a tinted title band, a round icon badge, silver corner brackets and a diagonal glint. Every callout type has its own colour.
 - **A `[!gm]` callout** for Game Master notes, with a *GM only* corner ribbon.
 - **A `[!player]` callout** for text players may read, drawn as a card with a *Player info* corner ribbon.
+
+### Workspace
+
+- **Frosted-glass menus and pop-ups**, with framed hover previews.
+- **A livelier workspace:** glowing active file and accent-lined active tab, tinted folder icons, ribbon icons that glow on hover, a glass status bar.
+- **Custom task states:** `[/]` in progress, `[-]` cancelled, `[!]` important, `[?]` question, `[>]` moved, `[*]` starred, each with its own icon and colour.
 - **Section pages.** A note with `cssclasses: hub` gets a header panel in its section colour, with the section icon and a large faded copy of it; the first paragraph after the back link reads as a lead.
 - **Back links.** `> [!up] [[Parent]]` becomes a slim pill with an up-arrow badge.
 - **Section cards.** Add `cssclasses: hub` to a note, and each list under a heading becomes a grid of cards in reading view: icon badge, coloured top edge, subtitle and a large faded icon. Text after the link, such as `<small>Places and maps</small>`, becomes the subtitle.
-- **A small cracked mirror-shard emblem** in the bottom-right corner of every note.
 - **Night-sky graph view behind cracked mirror glass** in dark mode, and a pale dawn sky in light mode.
+
+### Plugins
+
+- **Ranked statblocks for Atlas VTT.** Layout names decide the look: *character* (gold), *creature* (mirror accent), *npc* (silver), *important* (violet), *boss* (crimson, cracked glass), *dormant* (violet turning crimson) and *companion* (green with a paw badge, for familiars, mounts and pets). A rank tag and a creature-type tag sit above the name.
+- **Atlas VTT support.** The [Atlas VTT](https://github.com/ByteMirror/atlas-vtt) plugin picks up the theme's colours, accents and dice font.
 - **Dice Roller support.** The [Dice Roller](https://github.com/javalent/dice-roller) sidebar gets glass dice tiles, a rounded advantage / disadvantage switch, a gradient roll button and mirror cards for results.
 - **Hearth support.** The [Hearth](https://github.com/ondreu/Hearth) start screen gets the night sky and mirror cracks, a silver serif title and framed mirror cards.
-- **Ranked statblocks for Atlas VTT.** Layout names decide the look: *character* (gold), *npc* (silver), *important* (violet), *boss* (crimson, cracked glass) and *companion* (green with a paw badge, for familiars, mounts and pets).
-- **Atlas VTT support.** The [Atlas VTT](https://github.com/ByteMirror/atlas-vtt) plugin picks up the theme's colours, accents and dice font.
-- **No external requests.** No web fonts or images are loaded; headings use serif fonts already on your system.
 
 ## Settings
+
+<p align="center">
+  <img src="docs/readme/palettes.svg" alt="The four accent palettes: Mirror, Amethyst, Twilight and Moonsilver, each in dark and light" width="100%">
+</p>
 
 Install [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) to change:
 
@@ -126,7 +187,7 @@ With *Callout style: Minimal* they all fall back to a plain tinted box. `docs/de
 
 ## Statblock creature types
 
-Atlas VTT statblocks show the creature's type as a pill next to the rank pill above the name, and as a small round seal beside the token. The statblock itself keeps its rank colours (NPC silver, Important violet, Boss red, Dormant violet to red).
+Atlas VTT statblocks show the creature's type as a tag next to the rank tag above the name, and as a small round seal beside the token. The statblock itself keeps its rank colours (NPC silver, Important violet, Boss red, Dormant violet to red).
 
 | Type | Seal |
 | --- | --- |
@@ -144,7 +205,7 @@ Atlas VTT statblocks show the creature's type as a pill next to the rank pill ab
 | Plant | green leaf |
 | Beast | brown paw |
 
-How it works: Atlas can't hand a field's value to CSS, so the Mirrored Realms NPC, Important NPC, Boss and Dormant Threat templates start with thirteen hidden marker blocks. Atlas shows only the one whose condition matches the `type` field (`creature_type` on the Dormant template), and the theme reads that marker. The match is exact but ignores case: write the plain type (`Undead`) and put anything extra in `subtype` (`Tiefling Lich`). To use it in your own Atlas template, copy the first thirteen blocks from one of those templates.
+How it works: Atlas can't hand a field's value to CSS, so the Mirrored Realms Creature, NPC, Important NPC, Boss and Dormant Threat templates start with thirteen hidden marker blocks. Atlas shows only the one whose condition matches the `creature_type` field, and the theme reads that marker. The match is exact but ignores case: write the plain type (`Undead`) and put anything extra in `subtype` (`Tiefling Lich`). To use it in your own Atlas template, copy the first thirteen blocks from one of those templates.
 
 ## Custom card colours and icons
 
@@ -173,4 +234,12 @@ Hover previews of hub pages show a small header band with the section icon and n
 
 ## License
 
-[MIT](LICENSE) © Okami. The default card icon is from [Lucide](https://lucide.dev) (ISC License).
+[MIT](LICENSE) © Okami. The default card icon and the creature-type seals are from [Lucide](https://lucide.dev) (ISC License).
+
+The theme, the banner and the palette graphic in `docs/readme/` were made with the help of Claude, an AI assistant by Anthropic; the graphics are drawn as code. The screenshots show [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate) vault with this theme.
+
+---
+
+<div align="center">
+  <p><em>A mirror does not lie. It only forgets which side of the glass you were standing on.</em></p>
+</div>
