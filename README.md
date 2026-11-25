@@ -27,6 +27,7 @@ Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a ta
 - **Section cards.** Add `cssclasses: hub` to a note, and each list under a heading becomes a grid of cards in reading view: icon badge, coloured top edge, subtitle and a large faded icon. Text after the link, such as `<small>Places and maps</small>`, becomes the subtitle.
 - **A small cracked mirror-shard emblem** in the bottom-right corner of every note.
 - **Night-sky graph view behind cracked mirror glass** in dark mode, and a pale dawn sky in light mode.
+- **Dice Roller support.** The [Dice Roller](https://github.com/javalent/dice-roller) sidebar gets glass dice tiles, a rounded advantage / disadvantage switch, a gradient roll button and mirror cards for results.
 - **Hearth support.** The [Hearth](https://github.com/ondreu/Hearth) start screen gets the night sky and mirror cracks, a silver serif title and framed mirror cards.
 - **Ranked statblocks for Atlas VTT.** Layout names decide the look: *character* (gold), *npc* (silver), *important* (violet), *boss* (crimson, cracked glass) and *companion* (green with a paw badge, for familiars, mounts and pets).
 - **Atlas VTT support.** The [Atlas VTT](https://github.com/ByteMirror/atlas-vtt) plugin picks up the theme's colours, accents and dice font.
@@ -38,10 +39,12 @@ Install [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) to
 
 | Setting | Options |
 | --- | --- |
-| Mirror accent | any colour, separately for dark and light |
+| Accent palette | Mirror (silver-blue and violet), Amethyst (purple), Twilight (violet and blue), Moonsilver (no colour) |
+| Mirror accent | any colour, separately for dark and light; overrides the palette |
 | GM callout colour | any colour, separately for dark and light |
 | Player info colour | any colour, separately for dark and light |
 | Surface | slate, obsidian, pewter |
+| Framed panes | on / off (off: sidebars, ribbon and tabs share one seamless surface) |
 | Heading style | serif or sans-serif |
 | Serif body text | on / off |
 | Page width | 560–1100 px |
