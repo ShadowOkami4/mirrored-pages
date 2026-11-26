@@ -112,7 +112,7 @@ Install [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) to
 | Blockquote style | High, Medium, Minimal |
 | Drop cap, heading ornaments | on / off |
 | Glass blur | 0–24 px |
-| Statblock texture (topographic contour lines) | on / off |
+| Statblock texture | Contour lines (default), Hive cells, Shattered glass, Starfield, Brushed silver, None |
 | Broken statblock edges (a shard missing from a corner and an edge) | on / off |
 
 <a id="installing"></a>
