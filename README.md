@@ -256,7 +256,7 @@ Hover previews of hub pages show a small header band with the section icon and n
 
 [MIT](LICENSE) © Okami. The default card icon and the creature-type seals are from [Lucide](https://lucide.dev) (ISC License).
 
-The theme and the README pictures were made with the help of Claude, an AI assistant by Anthropic: the header, section bars, pills and footer are rendered from Okami's stream kit branding page (Roboto Flex, SIL Open Font License), and the palette graphic is drawn as code. The screenshots show [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate) vault with this theme.
+The theme's code was written with the help of Claude, an AI assistant by Anthropic. None of the pictures in this README are AI-generated images: the header, section bars, pills and footer are rendered from Okami's own stream kit branding page (Roboto Flex, SIL Open Font License), the palette graphic is drawn as code, and the screenshots are real captures of [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate) vault with this theme.
 
 <br>
 
