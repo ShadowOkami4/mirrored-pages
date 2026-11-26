@@ -218,6 +218,10 @@ How it works: Atlas can't hand a field's value to CSS, so the Mirrored Realms Cr
 <a id="make-it-yours"></a>
 <img src="docs/readme/parts/head-extend.png" alt="Make it yours" width="100%">
 
+### Bestiary titles
+
+Add `bestiary` to a creature note's `cssclasses`. Its title becomes centred, letter-spaced silver capitals with a *Mirrorgate Bestiary* label above, a diamond below, and a diagonal slice of the name knocked out of place like a broken pane (in reading view).
+
 ### Custom card colours and icons
 
 Each card reads two variables, so a CSS snippet in your vault can give a card its own look by matching the link name:
