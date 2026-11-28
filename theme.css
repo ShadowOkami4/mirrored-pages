@@ -252,6 +252,128 @@ settings:
     description: Keep statblocks whole instead of missing a shard at a corner and an edge
     type: class-toggle
     default: false
+  -
+    id: mp-sb-designs
+    title: Statblock designs
+    description: A look for each kind of Atlas VTT statblock
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: mp-sb-npc
+    title: NPCs
+    description: NPC and Important NPC statblocks
+    type: class-select
+    allowEmpty: false
+    default: mp-sb-npc-mirror
+    options:
+      -
+        label: Mirror (theme)
+        value: mp-sb-npc-mirror
+      -
+        label: Beyond (2024 rules)
+        value: mp-sb-npc-beyond
+      -
+        label: Classic tome (2014)
+        value: mp-sb-npc-classic
+      -
+        label: Paper journal
+        value: mp-sb-npc-paper
+      -
+        label: Plain
+        value: mp-sb-npc-plain
+  -
+    id: mp-sb-monster
+    title: Monsters
+    description: Creature statblocks from the bestiary
+    type: class-select
+    allowEmpty: false
+    default: mp-sb-monster-mirror
+    options:
+      -
+        label: Mirror (theme)
+        value: mp-sb-monster-mirror
+      -
+        label: Beyond (2024 rules)
+        value: mp-sb-monster-beyond
+      -
+        label: Classic tome (2014)
+        value: mp-sb-monster-classic
+      -
+        label: Paper journal
+        value: mp-sb-monster-paper
+      -
+        label: Plain
+        value: mp-sb-monster-plain
+  -
+    id: mp-sb-boss
+    title: Bosses
+    description: Boss and Dormant Boss statblocks
+    type: class-select
+    allowEmpty: false
+    default: mp-sb-boss-mirror
+    options:
+      -
+        label: Mirror (theme)
+        value: mp-sb-boss-mirror
+      -
+        label: Beyond (2024 rules)
+        value: mp-sb-boss-beyond
+      -
+        label: Classic tome (2014)
+        value: mp-sb-boss-classic
+      -
+        label: Paper journal
+        value: mp-sb-boss-paper
+      -
+        label: Plain
+        value: mp-sb-boss-plain
+  -
+    id: mp-sb-character
+    title: Characters
+    description: Player character sheets
+    type: class-select
+    allowEmpty: false
+    default: mp-sb-character-mirror
+    options:
+      -
+        label: Mirror (theme)
+        value: mp-sb-character-mirror
+      -
+        label: Beyond (2024 rules)
+        value: mp-sb-character-beyond
+      -
+        label: Classic tome (2014)
+        value: mp-sb-character-classic
+      -
+        label: Paper journal
+        value: mp-sb-character-paper
+      -
+        label: Plain
+        value: mp-sb-character-plain
+  -
+    id: mp-sb-companion
+    title: Companions
+    description: Familiars, mounts and pets
+    type: class-select
+    allowEmpty: false
+    default: mp-sb-companion-mirror
+    options:
+      -
+        label: Mirror (theme)
+        value: mp-sb-companion-mirror
+      -
+        label: Beyond (2024 rules)
+        value: mp-sb-companion-beyond
+      -
+        label: Classic tome (2014)
+        value: mp-sb-companion-classic
+      -
+        label: Paper journal
+        value: mp-sb-companion-paper
+      -
+        label: Plain
+        value: mp-sb-companion-plain
 */
 
 /* ---------- Fonts ------------------------------------------------------- */
@@ -3214,6 +3336,317 @@ body:not(.mp-no-statblock-breaks) .atlas-statblock .atlas-statblock-body::before
   -webkit-mask: url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 74 48%22 width=%2274%22 height=%2248%22 fill=%22none%22 stroke=%22black%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M0 0.5L28 30L50 21L73.5 48%22 stroke-width=%224%22 stroke-opacity=%220.25%22/%3E%3Cpath d=%22M0 0.5L28 30L50 21L73.5 48%22 stroke-width=%221.2%22/%3E%3C/svg%3E") right top / 74px 48px no-repeat, url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 52 17%22 width=%2252%22 height=%2217%22 fill=%22none%22 stroke=%22black%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M0.5 17L26 0.6L51.5 17%22 stroke-width=%224%22 stroke-opacity=%220.25%22/%3E%3Cpath d=%22M0.5 17L26 0.6L51.5 17%22 stroke-width=%221.2%22/%3E%3C/svg%3E") right 136px bottom / 52px 17px no-repeat;
   mask: url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 74 48%22 width=%2274%22 height=%2248%22 fill=%22none%22 stroke=%22black%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M0 0.5L28 30L50 21L73.5 48%22 stroke-width=%224%22 stroke-opacity=%220.25%22/%3E%3Cpath d=%22M0 0.5L28 30L50 21L73.5 48%22 stroke-width=%221.2%22/%3E%3C/svg%3E") right top / 74px 48px no-repeat, url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 52 17%22 width=%2252%22 height=%2217%22 fill=%22none%22 stroke=%22black%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M0.5 17L26 0.6L51.5 17%22 stroke-width=%224%22 stroke-opacity=%220.25%22/%3E%3Cpath d=%22M0.5 17L26 0.6L51.5 17%22 stroke-width=%221.2%22/%3E%3C/svg%3E") right 136px bottom / 52px 17px no-repeat;
 }
+
+/* ---------- Statblock designs ------------------------------------------
+   Style Settings > Statblock design picks a look for each kind of statblock:
+   Mirror (the theme's own), Beyond (2024 rules), Classic tome (2014),
+   Paper journal or Plain. NPCs include Important NPCs; Bosses include
+   Dormant Bosses. Generated rules: edit sb_designs.py, not by hand. */
+
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) {
+  --background-primary: var(--sbp-bg);
+  --background-primary-alt: var(--sbp-bg2);
+  --background-secondary: var(--sbp-bg2);
+  --background-modifier-border: var(--sbp-line);
+  --background-modifier-hover: color-mix(in srgb, var(--sbp-red) 8%, transparent);
+  --text-normal: var(--sbp-ink);
+  --text-muted: var(--sbp-muted);
+  --text-faint: var(--sbp-faint);
+  --text-accent: var(--sbp-red);
+  --text-accent-hover: var(--sbp-red);
+  --interactive-accent: var(--sbp-red);
+  --link-color: var(--sbp-red);
+  --mp-accent: var(--sbp-red);
+  --mp-rank: var(--sbp-red);
+  --mp-silver-hi: var(--sbp-title);
+  --mp-silver-lo: var(--sbp-muted);
+  --mp-glass: transparent;
+  --mp-glass-shine: transparent;
+  color-scheme: light;
+  color: var(--sbp-ink);
+  font-family: var(--sbp-body-font);
+  clip-path: none;
+  background: var(--sbp-paper);
+}
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-statblock-body { --mp-type-ink: color-mix(in srgb, var(--mp-type) 50%, black); background: none; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-statblock-body::before { content: none; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header {
+  margin-bottom: 4px;
+  padding: 0 0 10px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-heading {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--sbp-title);
+  filter: none;
+  text-shadow: none;
+  font-family: var(--sbp-title-font);
+}
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-header__subtitle, .atlas-sb-line) { color: var(--sbp-ink); font-family: var(--sbp-line-font, var(--mp-serif)); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-label, .atlas-sb-labelled--run-in > .atlas-sb-label, .atlas-sb-metric__heading, .atlas-sb-spell-level) {
+  font-family: inherit;
+  font-size: 1em;
+  font-variant: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--sbp-label);
+}
+/* AC, Initiative, Speed as one line of run-in stats, as in the books */
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-row > .atlas-sb-item > .atlas-sb-stat.atlas-sb-labelled--stacked,
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-metric {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.35em;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  text-align: left;
+}
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-row:has(> .atlas-sb-item > .atlas-sb-labelled--stacked) { gap: 2px 18px; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-row > .atlas-sb-item:has(> .atlas-sb-labelled--stacked) { flex: 0 0 auto; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-row > .atlas-sb-item > .atlas-sb-stat.atlas-sb-labelled--stacked { align-items: baseline; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-metric__value, .atlas-sb-stat.atlas-sb-labelled--stacked .atlas-sb-value) {
+  font-family: inherit;
+  font-weight: 400;
+  color: var(--sbp-ink);
+  text-shadow: none;
+}
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="row"] { font-family: inherit; color: var(--sbp-label); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="col"] { color: var(--sbp-muted); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="row"] + td { font-family: inherit; color: var(--sbp-ink); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading { padding-left: 0 !important; text-shadow: none; color: var(--sbp-title); font-family: var(--sbp-title-font); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading::before { content: none; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading__row { background: none; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-columns { column-rule: 0; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-trait-name { color: var(--sbp-ink); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-spells, .atlas-sb-spell-list) > li::before { box-shadow: none; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-image-placeholder, .atlas-sb-portrait img) { border: 1px solid var(--sbp-line); box-shadow: none; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-counter__pip { box-shadow: none; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header__text::before {
+  color: var(--sbp-red);
+  background: transparent;
+  border-color: color-mix(in srgb, var(--sbp-red) 55%, transparent);
+}
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"], body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header > .atlas-sb-item[data-block="image"]::before { box-shadow: none; }
+
+
+/* Beyond: the 2024 rulebook statblock. Cream page, dark red names and
+   headings, sans-serif text, and the six abilities in three tinted tables. */
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) {
+  --sbp-bg: #fbf7ee;
+  --sbp-bg2: #f1e9d8;
+  --sbp-paper: linear-gradient(180deg, #fdfaf3, #f7f0e1);
+  --sbp-ink: #1d1a17;
+  --sbp-muted: #6c6256;
+  --sbp-faint: #a3998b;
+  --sbp-red: #7b1e12;
+  --sbp-title: #6a1a10;
+  --sbp-label: #1d1a17;
+  --sbp-line: #d5c6a6;
+  --sbp-title-font: var(--mp-serif);
+  --sbp-body-font: var(--font-interface);
+  --sb-phys: #e6dfee;
+  --sb-ment: #efe3cc;
+  border: 1px solid #d8c7a2;
+  border-radius: 6px;
+  box-shadow: 0 1px 0 #fff inset, 0 6px 22px rgb(0 0 0 / 0.35);
+}
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header { border-bottom: 2px solid var(--sbp-red); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-heading { font-size: 1.75em; font-weight: 700; font-variant: small-caps; letter-spacing: 0.02em; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header__subtitle { font-style: italic; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-line { font-style: italic; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-label { color: var(--sbp-title); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-scores--table { gap: 6px; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group { border-collapse: separate; border-spacing: 0 2px; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="col"] { font-size: 0.68em; letter-spacing: 0.08em; text-transform: uppercase; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group :is(th[scope="row"], td) { padding: 3px 6px; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="row"] { font-weight: 700; text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.04em; color: var(--sbp-ink); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group tbody tr:first-child > * { background: var(--sb-phys); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group tbody tr:last-child > * { background: var(--sb-ment); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group tbody tr > :first-child { border-radius: 3px 0 0 3px; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group tbody tr > :last-child { border-radius: 0 3px 3px 0; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group .atlas-sb-score-column { background: color-mix(in srgb, var(--sbp-ink) 7%, var(--sb-phys)); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group tbody tr:last-child .atlas-sb-score-column { background: color-mix(in srgb, var(--sbp-ink) 7%, var(--sb-ment)); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading { font-size: 1.15em; font-weight: 700; font-variant: small-caps; letter-spacing: 0.03em; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading__row { padding-bottom: 2px; border-bottom: 1px solid var(--sbp-red); }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-rule, .atlas-sb-divider) { height: 1px; background: var(--sbp-red); opacity: 0.6; }
+:is(body.mp-sb-npc-beyond .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-beyond .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-beyond .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-beyond .atlas-statblock[data-layout*="character"], body.mp-sb-companion-beyond .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading .atlas-sb-rule { display: none; }
+
+
+/* Classic tome: the 2014 statblock. Parchment between two orange bars,
+   red small-caps names, tapered red rules and red top properties. */
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) {
+  --sbp-bg: #fdf1dc;
+  --sbp-bg2: #f4e3c3;
+  --sbp-paper: #fdf1dc;
+  --sbp-ink: #111;
+  --sbp-muted: #6b5a45;
+  --sbp-faint: #a8977c;
+  --sbp-red: #7a200d;
+  --sbp-title: #7a200d;
+  --sbp-label: #7a200d;
+  --sbp-line: #d9b98a;
+  --sbp-title-font: "Libre Baskerville", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+  --sbp-body-font: "Scala Sans", "Gill Sans", "Gill Sans MT", "Segoe UI", sans-serif;
+  border: 1px solid #b08a4e;
+  border-block: 5px solid #e69a28;
+  border-radius: 0;
+  box-shadow: 0 0 0 1px #000 inset, 0 0 1.4em #867453;
+}
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header { padding-bottom: 12px; background: url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 6%22 preserveAspectRatio=%22none%22%3E%3Cpolygon points=%220,0 100,3 0,6%22 fill=%22%23922610%22/%3E%3C/svg%3E") bottom left / 100% 5px no-repeat; }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-heading { font-size: 1.85em; font-weight: 700; font-variant: small-caps; letter-spacing: 0.01em; }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-line, :is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header__subtitle { font-style: italic; color: var(--sbp-ink); }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-labelled--run-in .atlas-sb-value { color: var(--sbp-red); }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-stat.atlas-sb-labelled--stacked .atlas-sb-value { color: var(--sbp-red); }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group { text-align: center; }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group :is(th, td) { padding: 2px 6px; color: var(--sbp-red); }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="row"] { font-weight: 700; text-transform: uppercase; color: var(--sbp-red); }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="col"] { font-size: 0.7em; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sbp-red); opacity: 0.75; }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-scores--table { padding: 8px 0 10px; background: url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 6%22 preserveAspectRatio=%22none%22%3E%3Cpolygon points=%220,0 100,3 0,6%22 fill=%22%23922610%22/%3E%3C/svg%3E") top left / 100% 5px no-repeat, url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 6%22 preserveAspectRatio=%22none%22%3E%3Cpolygon points=%220,0 100,3 0,6%22 fill=%22%23922610%22/%3E%3C/svg%3E") bottom left / 100% 5px no-repeat; }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading { font-size: 1.3em; font-weight: 400; font-variant: small-caps; letter-spacing: 0.02em; }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading__row { padding-bottom: 1px; border-bottom: 1px solid var(--sbp-red); }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading .atlas-sb-rule { display: none; }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-rule, .atlas-sb-divider) { height: 5px; background: url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 6%22 preserveAspectRatio=%22none%22%3E%3Cpolygon points=%220,0 100,3 0,6%22 fill=%22%23922610%22/%3E%3C/svg%3E") left / 100% 100% no-repeat; opacity: 1; }
+:is(body.mp-sb-npc-classic .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-classic .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-classic .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-classic .atlas-statblock[data-layout*="character"], body.mp-sb-companion-classic .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-trait-name { font-weight: 700; font-style: italic; }
+
+
+/* Paper journal: a page torn from a GM's notebook. Fibred paper, a strip
+   of tape, handwritten names, typewriter labels and a red rank stamp. */
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) {
+  --sbp-bg: #f3ead4;
+  --sbp-bg2: #e9dcbc;
+  --sbp-paper: url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.9%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3CfeColorMatrix values=%220 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .16 0 0 0 .09 0%22/%3E%3C/filter%3E%3Crect width=%22220%22 height=%22220%22 filter=%22url(%23n)%22/%3E%3C/svg%3E"), radial-gradient(ellipse 120% 90% at 50% 40%, #f6eed9 55%, #e7d7b0);
+  --sbp-ink: #262a36;
+  --sbp-muted: #6a5f4b;
+  --sbp-faint: #a59877;
+  --sbp-red: #a3271d;
+  --sbp-title: #1f2a44;
+  --sbp-label: #6b4423;
+  --sbp-line: #c9b58a;
+  --sbp-title-font: "Ink Free", "Segoe Print", "Bradley Hand", "Noteworthy", "Comic Sans MS", cursive;
+  --sbp-label-font: "Courier Prime", "Courier New", Courier, monospace;
+  --sbp-body-font: var(--mp-serif);
+  --sbp-line-font: var(--mp-serif);
+  --sb-sketch: 255px 12px 225px 12px / 12px 225px 12px 255px;
+  border: 0;
+  border-radius: 2px 3px 2px 4px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 0.25), 0 10px 24px -6px rgb(0 0 0 / 0.55);
+}
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-statblock-body { position: relative; padding-top: 30px; }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-statblock-body::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 118px;
+  height: 22px;
+  translate: -50% 0;
+  rotate: -2.5deg;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.35), transparent 60%), rgb(222 205 150 / 0.75);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15);
+  -webkit-mask: linear-gradient(90deg, transparent 0 2px, #000 2px calc(100% - 2px), transparent 0), repeating-linear-gradient(180deg, #000 0 3px, transparent 3px 4px);
+  -webkit-mask-composite: source-over;
+}
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header { border-bottom: 1.5px dashed color-mix(in srgb, var(--sbp-ink) 45%, transparent); }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-heading { font-size: 2em; font-weight: 700; letter-spacing: 0; line-height: 1.15; }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-label, .atlas-sb-labelled--run-in > .atlas-sb-label, .atlas-sb-metric__heading, .atlas-sb-spell-level) {
+  font-family: var(--sbp-label-font);
+  font-size: 0.82em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-row > .atlas-sb-item > .atlas-sb-stat.atlas-sb-labelled--stacked {
+  padding: 3px 10px;
+  border: 1.5px solid color-mix(in srgb, var(--sbp-ink) 70%, transparent);
+  border-radius: var(--sb-sketch);
+}
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group {
+  padding: 4px 6px;
+  border: 1.5px solid color-mix(in srgb, var(--sbp-ink) 70%, transparent);
+  border-radius: var(--sb-sketch);
+}
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="row"] { font-family: var(--sbp-label-font); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="col"] { font-family: var(--sbp-label-font); font-size: 0.7em; }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="row"] + td { font-family: var(--sbp-title-font); font-size: 1.25em; color: var(--sbp-title); }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading { font-size: 1.4em; font-weight: 700; letter-spacing: 0; text-transform: none; }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading__row {
+  padding-bottom: 2px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sbp-red) 70%, transparent), color-mix(in srgb, var(--sbp-red) 15%, transparent)) bottom left / 100% 2px no-repeat;
+}
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading .atlas-sb-rule { display: none; }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-rule, .atlas-sb-divider) { height: 0; border-top: 1.5px dashed color-mix(in srgb, var(--sbp-ink) 40%, transparent); background: none; opacity: 1; }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-trait-name { font-weight: 700; font-style: italic; color: var(--sbp-title); }
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header__text::before {
+  padding: 1px 8px;
+  border: 2px solid var(--sbp-red);
+  border-radius: 3px;
+  rotate: -3deg;
+  font-family: var(--sbp-label-font);
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+}
+:is(body.mp-sb-npc-paper .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-paper .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-paper .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-paper .atlas-statblock[data-layout*="character"], body.mp-sb-companion-paper .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header__text::after { font-family: var(--sbp-label-font); border-style: dashed; }
+
+
+/* Plain: the same information without the theme's glass, glow or textures. */
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) {
+  clip-path: none;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-primary);
+  box-shadow: none;
+}
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-statblock-body { background: none; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-statblock-body::before { content: none; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header { padding: 0 0 10px; border: 0; border-bottom: 1px solid var(--background-modifier-border); border-radius: 0; background: none; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-heading { background: none; -webkit-text-fill-color: currentColor; color: var(--text-normal); filter: none; font-family: var(--font-interface); font-size: 1.5em; letter-spacing: 0; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-header__subtitle, .atlas-sb-line) { font-family: var(--font-interface); color: var(--text-muted); }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-label, .atlas-sb-labelled--run-in > .atlas-sb-label, .atlas-sb-metric__heading, .atlas-sb-spell-level) {
+  font-family: var(--font-interface);
+  font-size: 1em;
+  font-variant: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--text-normal);
+}
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-labelled--stacked > .atlas-sb-label { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-row > .atlas-sb-item > .atlas-sb-stat.atlas-sb-labelled--stacked,
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-metric,
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  background: var(--background-secondary);
+  box-shadow: none;
+}
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-metric__value, .atlas-sb-stat.atlas-sb-labelled--stacked .atlas-sb-value) { font-family: var(--font-interface); color: var(--text-normal); text-shadow: none; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group :is(th, td) { font-family: var(--font-interface); }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-score-group th[scope="row"] { color: var(--text-normal); font-size: 0.9em; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading { padding-left: 0 !important; font-family: var(--font-interface); font-size: 0.8em; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-shadow: none; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading::before { content: none; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading__row { background: none; border-bottom: 1px solid var(--background-modifier-border); }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-section-heading .atlas-sb-rule { display: none; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-rule, .atlas-sb-divider) { height: 1px; background: var(--background-modifier-border); opacity: 1; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-columns { column-rule: 0; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-image-placeholder, .atlas-sb-portrait img) { box-shadow: none; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) :is(.atlas-sb-spells, .atlas-sb-spell-list) > li::before { box-shadow: none; }
+:is(body.mp-sb-npc-plain .atlas-statblock[data-layout*="npc"], body.mp-sb-monster-plain .atlas-statblock:is([data-layout*="creature"], [data-layout*="monster"]), body.mp-sb-boss-plain .atlas-statblock:is([data-layout*="boss"], [data-layout*="dormant"]), body.mp-sb-character-plain .atlas-statblock[data-layout*="character"], body.mp-sb-companion-plain .atlas-statblock[data-layout*="companion"]):not(#mp-sb) .atlas-sb-header > .atlas-sb-item[data-block="image"]::before { box-shadow: none; }
+
+/* end statblock designs */
 
 /* Map toolbar and panels: dark glass with an accent edge */
 body .atlas-tool-bar {

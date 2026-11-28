@@ -83,6 +83,7 @@ Made for [The Mirrored Realms](https://github.com/ShadowOkami4/Mirrorgate), a ta
 ### Plugins
 
 - **Ranked statblocks for Atlas VTT.** Layout names decide the look: *character* (gold), *creature* (mirror accent), *npc* (silver), *important* (violet), *boss* (crimson, cracked glass), *dormant* (violet turning crimson) and *companion* (green with a paw badge, for familiars, mounts and pets). A rank tag and a creature-type tag sit above the name.
+- **Statblock designs.** Each kind of statblock can wear its own look: the theme's Mirror glass, *Beyond* (a cream page in the style of the 2024 rulebooks, with tinted ability tables), *Classic tome* (parchment between orange bars, as in 2014), *Paper journal* (a taped notebook page with handwritten names and a rank stamp) or *Plain* (no glass, glow or texture). NPCs include Important NPCs, and Bosses include Dormant Bosses.
 - **Atlas VTT support.** The [Atlas VTT](https://github.com/ByteMirror/atlas-vtt) plugin picks up the theme's colours, accents and dice font.
 - **Dice Roller support.** The [Dice Roller](https://github.com/javalent/dice-roller) sidebar gets glass dice tiles, a rounded advantage / disadvantage switch, a gradient roll button and mirror cards for results.
 - **Hearth support.** The [Hearth](https://github.com/ondreu/Hearth) start screen gets the night sky and mirror cracks, a silver serif title and framed mirror cards.
@@ -114,6 +115,7 @@ Install [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) to
 | Glass blur | 0–24 px |
 | Statblock texture | Contour lines (default), Hive cells, Shattered glass, Starfield, Brushed silver, None |
 | Broken statblock edges (a shard missing from a corner and an edge) | on / off |
+| Statblock designs, one pick each for NPCs, Monsters, Bosses, Characters and Companions | Mirror (default), Beyond (2024 rules), Classic tome (2014), Paper journal, Plain |
 
 <a id="installing"></a>
 <img src="docs/readme/parts/head-install.png" alt="Installing" width="100%">
